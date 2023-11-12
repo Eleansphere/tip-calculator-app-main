@@ -53,6 +53,10 @@ main{
     background-color: var(--veryDarkCyan);
     font-size: 1.4rem;
 }
+.tip-amount-wrapper button:focus{
+    color: var(--veryDarkCyan);
+    background-color: hsl(172, 100%, 77%);;
+}
 .tip-amount-wrapper input{
     text-align: center;
     padding: 0;
@@ -77,8 +81,10 @@ input{
     text-align: right;
     width: 100%;
     font-size: 1.4rem;
-    padding: .5rem 1rem; 
-    outline-color: var(--strongCyan);
+    padding: .5rem 1rem;
+}
+input:focus{
+    outline: solid 2px var(--strongCyan);
 }
 input, button:hover{
     cursor: pointer;  
@@ -89,6 +95,10 @@ button:hover{
 }
 label{
     color: var(--darkGrayishCyan);
+}
+#zero-msg{
+    color: red;
+    display: none;
 }
 /* Right/side/style */
 .side-results-wrapper{
@@ -106,11 +116,13 @@ label{
     border: none;
     border-radius: .2rem;
     padding: .6rem .6rem;
-    color: var(--veryDarkCyan);
-    background-color: var(--strongCyan); 
     text-transform: uppercase;
 }
-.side-results-wrapper button:hover{
+.side-results-wrapper button:enabled{
+    color: var(--veryDarkCyan);
+    background-color: var(--strongCyan); 
+}
+.side-results-wrapper button:enabled:hover{
     background-color: var(--lightGrayishCyan);
 }
 .results-text p{

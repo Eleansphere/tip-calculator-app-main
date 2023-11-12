@@ -17,7 +17,7 @@
           <label for="form-bill">Bill</label>
           <div class="icon-position">
             <img src="images/icon-dollar.svg" alt="icon-dollar" />
-            <input type="text" placeholder="0" id="form-bill" />
+            <input type="text" min="0" placeholder="0" id="form-bill" />
           </div>
         </div>
         <label for="custom-tip">Select Tip %</label>
@@ -31,6 +31,7 @@
         </div>
         <div class="input-flex-wrapper">
           <label for="form-people">Number of People</label>
+          <span id="zero-msg">Can't be zero</span>
           <div class="icon-position">
             <img src="images/icon-person.svg" alt="icon-person" />
             <input type="text" id="form-people" placeholder="0" />
@@ -44,17 +45,17 @@
               <p>Tip Amount</p>
               <span>/ per person</span>
             </div>
-            <span>$0.00</span>
+            <span id="tipAmount">$0.00</span>
           </div>
           <div class="results-wrapper">
             <div class="results-text">
               <p>Total</p>
               <span>/ person</span>
             </div>
-            <span>$0.00</span>
+            <span id="tipTotal">$0.00</span>
           </div>
         </div>
-        <button>Reset</button>
+        <button id="resetBtn" disabled>Reset</button>
       </div>
     </main>
     <script src="script.js"></script>
