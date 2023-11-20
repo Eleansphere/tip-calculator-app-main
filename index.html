@@ -22,16 +22,18 @@
         </div>
         <label for="custom-tip">Select Tip %</label>
         <div class="tip-amount-wrapper">
-          <button value="5">5%</button>
-          <button value="10">10%</button>
-          <button value="15">15%</button>
-          <button value="25">25%</button>
-          <button value="50">50%</button>
+          <button value="5" class="tip-amount-wrapper-button">5%</button>
+          <button value="10" class="tip-amount-wrapper-button">10%</button>
+          <button value="15" class="tip-amount-wrapper-button">15%</button>
+          <button value="25" class="tip-amount-wrapper-button">25%</button>
+          <button value="50" class="tip-amount-wrapper-button">50%</button>
           <input type="text" id="custom-tip" placeholder="Custom" />
         </div>
         <div class="input-flex-wrapper">
-          <label for="form-people">Number of People</label>
-          <span id="zero-msg">Can't be zero</span>
+          <div class="input-flex-message">
+            <label for="form-people">Number of People</label>
+            <span id="zero-msg">Can't be zero</span>
+          </div>
           <div class="icon-position">
             <img src="images/icon-person.svg" alt="icon-person" />
             <input type="text" id="form-people" placeholder="0" />
