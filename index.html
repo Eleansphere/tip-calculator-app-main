@@ -2,63 +2,65 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="style.css" />
     <title>Tip calculator app</title>
   </head>
   <body>
     <main>
-      <div class="side-form-wrapper">
-        <div class="input-flex-wrapper">
-          <label for="form-bill">Bill</label>
-          <div class="icon-position">
-            <img src="images/icon-dollar.svg" alt="icon-dollar" />
-            <input type="text" min="0" placeholder="0" id="form-bill" />
-          </div>
-        </div>
-        <label for="custom-tip">Select Tip %</label>
-        <div class="tip-amount-wrapper">
-          <button value="5" class="tip-amount-wrapper-button">5%</button>
-          <button value="10" class="tip-amount-wrapper-button">10%</button>
-          <button value="15" class="tip-amount-wrapper-button">15%</button>
-          <button value="25" class="tip-amount-wrapper-button">25%</button>
-          <button value="50" class="tip-amount-wrapper-button">50%</button>
-          <input type="text" id="custom-tip" placeholder="Custom" />
-        </div>
-        <div class="input-flex-wrapper">
-          <div class="input-flex-message">
-            <label for="form-people">Number of People</label>
-            <span id="zero-msg">Can't be zero</span>
-          </div>
-          <div class="icon-position">
-            <img src="images/icon-person.svg" alt="icon-person" />
-            <input type="text" id="form-people" placeholder="0" />
-          </div>
-        </div>
+      <div class="splitter-logo">
+        <img src="images/logo.svg" alt="logo" />
       </div>
-      <div class="side-results-wrapper">
-        <div class="results-flex">
-          <div class="results-wrapper">
-            <div class="results-text">
-              <p>Tip Amount</p>
-              <span>/ per person</span>
+      <section>
+        <div class="side-form-wrapper">
+          <div class="input-flex-wrapper">
+            <label for="form-bill">Bill</label>
+            <div class="icon-position">
+              <img src="images/icon-dollar.svg" alt="icon-dollar" />
+              <input type="number" min="0" placeholder="0" id="form-bill" />
             </div>
-            <span id="tipAmount">$0.00</span>
           </div>
-          <div class="results-wrapper">
-            <div class="results-text">
-              <p>Total</p>
-              <span>/ person</span>
+          <label for="custom-tip">Select Tip %</label>
+          <div class="tip-amount-wrapper">
+            <button value="5" class="tip-amount-wrapper-button">5%</button>
+            <button value="10" class="tip-amount-wrapper-button">10%</button>
+            <button value="15" class="tip-amount-wrapper-button">15%</button>
+            <button value="25" class="tip-amount-wrapper-button">25%</button>
+            <button value="50" class="tip-amount-wrapper-button">50%</button>
+            <input type="number" min="0" id="custom-tip" placeholder="Custom" />
+          </div>
+          <div class="input-flex-wrapper">
+            <div class="input-flex-message">
+              <label for="form-people">Number of People</label>
+              <span id="zero-msg">Can't be zero</span>
             </div>
-            <span id="tipTotal">$0.00</span>
+            <div class="icon-position">
+              <img src="images/icon-person.svg" alt="icon-person" />
+              <input type="number" min="0" id="form-people" placeholder="0" />
+            </div>
           </div>
         </div>
-        <button id="resetBtn" disabled>Reset</button>
-      </div>
+        <div class="side-results-wrapper">
+          <div class="results-flex">
+            <div class="results-wrapper">
+              <div class="results-text">
+                <p>Tip Amount</p>
+                <span>/ per person</span>
+              </div>
+              <span id="tipAmount">$0.00</span>
+            </div>
+            <div class="results-wrapper">
+              <div class="results-text">
+                <p>Total</p>
+                <span>/ person</span>
+              </div>
+              <span id="tipTotal">$0.00</span>
+            </div>
+          </div>
+          <button id="resetBtn" disabled>Reset</button>
+        </div>
+      </section>
     </main>
     <script src="script.js"></script>
   </body>

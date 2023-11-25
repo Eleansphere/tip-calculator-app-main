@@ -1,22 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
-:root{
+
+:root {
     --strongCyan: hsl(172, 67%, 45%);
     --veryDarkCyan: hsl(183, 100%, 15%);
     --darkGrayishCyan: hsl(186, 14%, 43%);
     --grayishCyan: hsl(184, 14%, 56%);
     --lightGrayishCyan: hsl(185, 41%, 84%);
     --veryLightGrayishCyan: hsl(189, 41%, 97%);
-    --white: hsl(0, 0%, 100%);  
+    --white: hsl(0, 0%, 100%);
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Space Mono', monospace;
 }
 
-body{
+/*Layout styles*/
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +29,16 @@ body{
     background-color: var(--lightGrayishCyan);
 }
 
-main{
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+
+section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 850px;
@@ -37,7 +49,7 @@ main{
 
 /* Left/side/style */
 
-.side-form-wrapper{
+.side-form-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -45,13 +57,13 @@ main{
     gap: 2rem;
 }
 
-.tip-amount-wrapper{
+.tip-amount-wrapper {
     display: grid;
     grid-template: 1fr 1fr/ 1fr 1fr 1fr;
     gap: 1rem;
 }
 
-.tip-amount-wrapper-button{
+.tip-amount-wrapper-button {
     border: none;
     padding: .4rem .4rem;
     border-radius: .4rem;
@@ -60,75 +72,88 @@ main{
     font-size: 1.4rem;
 }
 
-.focused-button{
+.focused-button {
     color: var(--veryDarkCyan);
     background-color: hsl(172, 100%, 77%);
 }
 
-.tip-amount-wrapper input{
+.tip-amount-wrapper input {
     text-align: center;
     padding: 0;
 }
 
-.icon-position{
+.icon-position {
     position: relative;
 }
 
-.icon-position img{
+.icon-position img {
     position: absolute;
     top: 0;
     left: 0;
     transform: translate(20px, 100%);
 }
 
-.input-flex-wrapper{
-    width: 100%;   
+.input-flex-wrapper {
+    width: 100%;
 }
 
-.input-flex-message{
+.input-flex-message {
     display: flex;
     justify-content: space-between;
 }
 
-input{
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input {
     border: none;
     border-radius: .4rem;
     color: var(--veryDarkCyan);
     background-color: var(--veryLightGrayishCyan);
     text-align: right;
     width: 100%;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding: .5rem 1rem;
 }
 
-input:focus{
+input:focus {
     outline: solid 2px var(--strongCyan);
 }
-.red-outline{
+
+.red-outline {
     outline: solid 2px rgb(235, 120, 120);
 }
 
-input, button:hover{
-    cursor: pointer;  
+input,
+button:hover {
+    cursor: pointer;
 }
 
-.tip-amount-wrapper button:hover{
+.tip-amount-wrapper button:hover {
     background-color: var(--strongCyan);
     color: var(--veryDarkCyan);
 }
 
-label{
+label {
     color: var(--darkGrayishCyan);
 }
 
-#zero-msg{
+#zero-msg {
     color: rgb(235, 120, 120);
     display: none;
 }
 
 /* Right/side/style */
 
-.side-results-wrapper{
+.side-results-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,7 +164,7 @@ label{
     background-color: var(--veryDarkCyan);
 }
 
-.side-results-wrapper button{
+.side-results-wrapper button {
     width: 85%;
     border: none;
     border-radius: .2rem;
@@ -147,46 +172,46 @@ label{
     text-transform: uppercase;
 }
 
-.side-results-wrapper button:enabled{
+.side-results-wrapper button:enabled {
     color: var(--veryDarkCyan);
-    background-color: var(--strongCyan); 
+    background-color: var(--strongCyan);
 }
 
-.side-results-wrapper button:enabled:hover{
+.side-results-wrapper button:enabled:hover {
     background-color: var(--lightGrayishCyan);
 }
 
-.results-text p{
+.results-text p {
     color: var(--white);
 }
 
-.results-text span{
+.results-text span {
     color: var(--darkGrayishCyan);
 }
 
-.results-flex{
+.results-flex {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 2rem;
 }
 
-.results-wrapper{
+.results-wrapper {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
 }
 
-.results-wrapper > span{
+.results-wrapper>span {
     font-size: 3rem;
     color: var(--strongCyan);
 }
 
 /* Responsive */
 
-@media only screen and (max-width:850px){
-    main{
+@media only screen and (max-width:850px) {
+    section {
         grid-template-columns: 1fr;
         grid-template-rows: 1.2fr 0.8fr;
         max-width: 500px;
